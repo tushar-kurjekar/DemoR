@@ -1,7 +1,4 @@
 FROM node:14.6.0-alpine3.10
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY package.json /usr/src/app
-RUN npm install
 COPY dist/ /usr/src/app
-CMD ["npm" , "start"]
