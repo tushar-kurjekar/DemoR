@@ -6,4 +6,4 @@ COPY . /app
 RUN npm start
 
 FROM nginx:1.17.1-alpine
-COPY --from=build-step /app/docs /usr/share/nginx/html
+COPY --from=build-step /app/dist/Map /usr/share/nginx/html
